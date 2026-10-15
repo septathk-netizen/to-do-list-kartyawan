@@ -1,0 +1,121 @@
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:  #f0f4ff;
+  color: #2b2826;
+  
+}
+
+h1 {
+ background: #331010;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 14px;
+  border-radius: 16px;
+  margin: 0 0 12px;
+}
+.sundo{
+      text-align: center;
+
+
+}
+
+#tanggal {
+    text-align: center;
+    margin: 5px 0px 15px 0px;
+    
+
+}
+
+#cari {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
+  border: 2px solid ;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+.kartu {
+  font-size: 19px;
+  padding: 5px;
+  color: black;
+  margin: 16px 8px ;
+  border-radius: 12px;
+  border: 2px solid #331010;   /* <-- baris baru */
+}
+.foto {
+  float: left;          /* foto mengambang ke kiri */
+  margin-right: 12px;   /* jarak antara foto dan tulisan */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  grid-row: span 2;            /* foto memanjang ke bawah, sejajar h3 dan p */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;          /* 50% membuat kotak menjadi lingkaran */
+  background-color: #4a6cf7;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+
+  display: flex;               /* trik untuk menaruh huruf tepat di tengah */
+  align-items: center;         /* tengah secara vertikal */
+  justify-content: center;     /* tengah secara horizontal */
+}
+.foto h3{
+  margin: 2px 2px 2px 2px;
+
+}
+.kartu p {
+  border-bottom: 2px solid #331010;  /* garis tipis di bawah jabatan */
+  padding-bottom: 16px;                 /* jarak antara tulisan dan garis */
+  margin-bottom: 8px;  
+  font-size: 13px;                /* jarak antara garis dan elemen di bawahnya */
+}
+.kartu li {
+  display: flex;
+  align-items: center;   /* semua item sejajar di tengah secara vertikal */
+  gap: 4px;              /* jarak antar item, jadi tidak perlu margin satu-satu */
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.batas {
+  display: block;
+  margin-top: 2px;     /* jarak kecil dari tulisan di atasnya */
+  color: gray;         /* warna abu-abu supaya terlihat sebagai keterangan */
+  font-size: 10px;
+}
+.tambah {
+  display: flex;
+  flex-wrap: wrap;           /* kalau tidak muat, turun ke baris baru */
+  justify-content: center;   /* rata tengah secara horizontal */
+  align-items: center;       /* rata tengah secara vertikal */
+  gap: 4px;  
+  margin-top: 12px;                /* jarak antar elemen */
+}
+.waktu {
+  display: grid;
+  grid-template-rows: auto auto;   /* 2 baris: baris span dan baris input */
+  grid-auto-flow: column;          /* isi grid ke samping dulu, baru ke bawah */
+  column-gap: 12px;                /* jarak antara dua kolom */
+  width: 100%;                     /* selebar form */
+  font-size: 12px;
+}
+.info {
+  flex: 1;        /* ambil semua ruang yang tersisa */
+  min-width: 0;   /* supaya teks panjang turun ke baris baru, bukan mendorong tombol keluar */
+}
+.prioritas::after {
+  content: " - ";   /* tanda strip yang ingin ditampilkan */
+}
+.kartu input[type="checkbox"]:checked + .info {
+  text-decoration: line-through;   /* garis coret */
+  color: rgb(224, 7, 7); 
+  filter: blur(0.3px);                    /* warna jadi pudar, tanda tugas selesai */
+}

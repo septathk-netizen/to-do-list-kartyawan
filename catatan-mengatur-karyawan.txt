@@ -1,0 +1,17 @@
+    (cara menambahkan data karyawan copy kode ini dan ganti ganti sesuai keinginan)
+    {
+    "nama": "111",
+    "jabatan": "KemenHAM",
+    "todo": [
+      {
+        "teks": "buat laporan bulanan",
+        "selesai": false
+      },
+      {
+        "teks": "rekap voice",
+        "selesai": true
+      }
+    ]
+  },
+
+
